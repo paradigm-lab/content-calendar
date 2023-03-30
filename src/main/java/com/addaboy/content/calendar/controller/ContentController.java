@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping(name = "/api/content")
+@RequestMapping(value = "/api/content")
 public class ContentController {
 
     public final ContentCollectionRepository repository;
@@ -19,7 +19,7 @@ public class ContentController {
     }
 
     // Make a request and find all the pieces of content in the system
-    @GetMapping(name = "")
+    @GetMapping
     public List<Content> getAll() {
         return repository.findAll();
     }
