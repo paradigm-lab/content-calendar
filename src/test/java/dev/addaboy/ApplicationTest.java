@@ -1,4 +1,4 @@
-package com.addaboy.content.calendar;
+package dev.addaboy;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
