@@ -1,11 +1,18 @@
 package dev.addaboy;
 
 
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ApplicationContext;
+
 import java.sql.*;
 
+@SpringBootApplication
 public class Application {
 
 	public static void main(String[] args) {
+		SpringApplication.run(Application.class);
+		/*
 		String jdbcURL = "jdbc:postgresql://localhost:5432:/postgres";
 
 		try (Connection conn = DriverManager.getConnection(jdbcURL, "postgres", "password")) {
@@ -25,5 +32,6 @@ public class Application {
 		} catch (SQLException e) {
 			throw new RuntimeException(e);
 		}
+		*/
 	}
 }
