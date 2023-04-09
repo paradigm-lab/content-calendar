@@ -4,7 +4,10 @@ spring:
       enabled: true
       path: /h2
   datasource:
-    url: jdbc:h2:file:~/test
-    username: content
-    password:
-    driverClassName: org.h2.Driver
+    # url: jdbc:h2:file:~/test
+    # username: content
+    # password:
+    # driverClassName: org.h2.Driver
+    url: jdbc:postgresql://localhost:5432
+    username: postgres
+    password: password
