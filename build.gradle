@@ -16,9 +16,14 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.springframework.boot:spring-boot-starter-validation'
 	implementation 'org.springframework.boot:spring-boot-starter-data-jdbc'
+	annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
 	runtimeOnly 'com.h2database:h2'
 
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+tasks.named('compileJava') {
+	inputs.files(tasks.named('processResources'))
 }
 
 tasks.named('test') {
