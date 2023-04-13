@@ -1,9 +1,11 @@
 package com.addaboy.content.calendar;
 
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.ConfigurableBootstrapContext;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.Arrays;
@@ -23,5 +25,10 @@ public class Application {
 		System.out.println(restTemplate);
 		 */
 	}
-
+	@Bean
+	CommandLineRunner commandLineRunner() {
+		return args -> {
+			System.out.println("Hello ChatGPT!");
+		};
+	}
 }
