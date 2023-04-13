@@ -53,6 +53,8 @@ public class ContentController {
         repository.deleteById(id);
     }
 
-
-    // Create, Read, Update, Delete - Filter | paging and sorting
+    @GetMapping("/filter/{keyword}")
+    public List<Content> findByTitle(@PathVariable String keyword) {
+        return repository.findAllByTitleContains(keyword);
+    }
 }
