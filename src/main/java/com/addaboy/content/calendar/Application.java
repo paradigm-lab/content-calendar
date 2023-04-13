@@ -1,5 +1,6 @@
 package com.addaboy.content.calendar;
 
+import com.addaboy.content.calendar.config.ContentCalendarProperties;
 import com.addaboy.content.calendar.model.Content;
 import com.addaboy.content.calendar.model.Status;
 import com.addaboy.content.calendar.model.Type;
@@ -8,6 +9,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.ConfigurableBootstrapContext;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
@@ -15,6 +17,7 @@ import org.springframework.web.client.RestTemplate;
 import java.time.LocalDateTime;
 import java.util.Arrays;
 
+@EnableConfigurationProperties(ContentCalendarProperties.class)
 @SpringBootApplication
 public class Application {
 
