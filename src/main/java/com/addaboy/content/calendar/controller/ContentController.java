@@ -2,6 +2,7 @@ package com.addaboy.content.calendar.controller;
 
 import com.addaboy.content.calendar.model.Content;
 import com.addaboy.content.calendar.repository.ContentCollectionRepository;
+import com.addaboy.content.calendar.repository.ContentRepository;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
@@ -14,9 +15,9 @@ import java.util.List;
 @CrossOrigin
 public class ContentController {
 
-    public final ContentCollectionRepository repository;
+    public final ContentRepository repository;
 
-    public ContentController(ContentCollectionRepository repository) {
+    public ContentController(ContentRepository repository) {
         this.repository = repository;
     }
 
@@ -49,7 +50,7 @@ public class ContentController {
     @ResponseStatus(HttpStatus.NO_CONTENT)
     @DeleteMapping("/{id}")
     public void delete(@PathVariable Integer id) {
-        repository.delete(id);
+        repository.deleteById(id);
     }
 
 
