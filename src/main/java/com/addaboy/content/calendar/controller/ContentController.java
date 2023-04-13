@@ -1,6 +1,7 @@
 package com.addaboy.content.calendar.controller;
 
 import com.addaboy.content.calendar.model.Content;
+import com.addaboy.content.calendar.model.Status;
 import com.addaboy.content.calendar.repository.ContentCollectionRepository;
 import com.addaboy.content.calendar.repository.ContentRepository;
 import jakarta.validation.Valid;
@@ -56,5 +57,10 @@ public class ContentController {
     @GetMapping("/filter/{keyword}")
     public List<Content> findByTitle(@PathVariable String keyword) {
         return repository.findAllByTitleContains(keyword);
+    }
+
+    @GetMapping("/filter/status/{status}")
+    public List<Content> findByStatus(@PathVariable Status status) {
+        return repository.listByStatus(status);
     }
 }
