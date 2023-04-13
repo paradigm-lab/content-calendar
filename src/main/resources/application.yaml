@@ -1,1 +1,3 @@
-
+cc:
+  welcomeMessage: <center><h1>Welcome to Addaboy Content Calendar!</h1></center>
+  about: <center><h1>This is Dan's content Calendar</h1></center>
